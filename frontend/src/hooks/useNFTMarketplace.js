@@ -141,7 +141,10 @@ export function useNFTMarketplace() {
     const items = [];
 
     try {
-      const publicProvider = new ethers.JsonRpcProvider(rpcUrl);
+      const publicProvider = new ethers.JsonRpcProvider(rpcUrl, {
+        name: "ephemery-testnet",
+        chainId: 39438146 // Verify this is correct for Ephemery
+      });
       const readOnlyContract = new ethers.Contract(contractAddress, MarketplaceAbi, publicProvider);
 
       const tokenCounter = await readOnlyContract.tokenCounter();
