@@ -8,9 +8,8 @@ const rpcUrl = import.meta.env.VITE_RPC_URL;
 
 // Convierte ipfs:// a una URL usable
 const resolveIPFS = (uri) => {
-  return uri.startsWith("ipfs://")
-    ? uri.replace("ipfs://", "https://ipfs.io/ipfs/")
-    : uri;
+  if (!uri) return "";
+  return uri.replace("ipfs://", "https://cloudflare-ipfs.com/ipfs/");
 };
 
 // export function useNFTMarketplace() {
