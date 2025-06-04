@@ -8,15 +8,9 @@ const rpcUrl = import.meta.env.VITE_RPC_URL;
 
 // Convierte ipfs:// a una URL usable
 const resolveIPFS = (uri) => {
-  const gateway = "https://dweb.link/ipfs/";
-  if (!uri) return "";
-  if (uri.startsWith("ipfs://")) {
-    return uri.replace("ipfs://", gateway);
-  } else if (uri.includes("/ipfs/")) {
-    const hash = uri.split("/ipfs/")[1];
-    return `${gateway}${hash}`;
-  }
-  return uri;
+  return uri.startsWith("ipfs://")
+    ? uri.replace("ipfs://", "https://nftstorage.link/ipfs/")
+    : uri;
 };
 
 
