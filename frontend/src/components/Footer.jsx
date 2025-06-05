@@ -6,7 +6,7 @@ function Footer() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex flex-col md:flex-row justify-between items-center">
             <div className="mb-6 md:mb-0">
-              <h2 className="text-xl font-bold mb-2">Mi<span className="text-[hsl(270_60%_60%)]">Galería</span>NFT</h2>
+              <h2 className="text-xl font-bold mb-2">Mi<span className="text-[hsl(270_60%_60%)]">Market</span>NFT</h2>
               <p className="text-sm text-[hsl(240_5%_65%)]">Colección exclusiva de NFT</p>
             </div>
             <div className="grid grid-cols-2 md:grid-cols-3 gap-8">
